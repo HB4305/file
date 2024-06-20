@@ -143,11 +143,11 @@ NODE* Search(NODE* pRoot, int x)
 //10 remove by value
 NODE* change(NODE* pRoot)
 {
-	while (pRoot->right != NULL) 
+	while (pRoot->left != NULL) 
 	{
-        pRoot = pRoot->right;
-    }
-    return pRoot;
+       		pRoot = pRoot->right;
+    	}
+    	return pRoot;
 } 
 void Remove(NODE* &pRoot, int x)
 {
@@ -183,7 +183,7 @@ void Remove(NODE* &pRoot, int x)
 		{
 			NODE*temp=change(pRoot);
 			pRoot->key=temp->key;
-			Remove(pRoot->right,temp->key);
+			Remove(pRoot->left,temp->key);
 		}
 	}
 	
