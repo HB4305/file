@@ -181,7 +181,7 @@ void Remove(NODE* &pRoot, int x)
 		}
 		else
 		{
-			NODE*temp=change(pRoot);
+			NODE*temp=change(pRoot->left);
 			pRoot->key=temp->key;
 			Remove(pRoot->left,temp->key);
 		}
