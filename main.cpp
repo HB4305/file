@@ -145,7 +145,7 @@ NODE* change(NODE* pRoot)
 {
 	while (pRoot->left != NULL) 
 	{
-       		pRoot = pRoot->right;
+       		pRoot = pRoot->leftleft;
     	}
     	return pRoot;
 } 
@@ -156,13 +156,13 @@ void Remove(NODE* &pRoot, int x)
 	{
 		Remove(pRoot->right,x);
 	}
-	else if(x<pRoot->key)
+	else if(x<=pRoot->key)
 	{
 		Remove(pRoot->left,x);
 	}
 	else 
 	{
-		if(pRoot->left==NULL&pRoot->right==NULL)
+		if(pRoot->left==NULL&&pRoot->right==NULL)
 		{
 			delete pRoot;
 			pRoot=NULL;	
@@ -170,8 +170,8 @@ void Remove(NODE* &pRoot, int x)
 		else if(pRoot->left==NULL)
 		{
 			NODE* temp = pRoot;
-            pRoot = pRoot->right;
-            delete temp;
+            		pRoot = pRoot->right;
+            		delete temp;
 		}
 		else if(pRoot->right==NULL)
 		{
