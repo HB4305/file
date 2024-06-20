@@ -326,7 +326,7 @@ bool isBST(NODE* pRoot)
 		return false;
 	}
 }
-// 20 check full binary tree
+// 19 check full binary tree
 bool isFullBST(NODE* pRoot)
 {
 	if(pRoot==NULL) return false;
