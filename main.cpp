@@ -145,7 +145,7 @@ NODE* change(NODE* pRoot)
 {
 	while (pRoot->left != NULL) 
 	{
-       		pRoot = pRoot->leftleft;
+       		pRoot = pRoot->left;
     	}
     	return pRoot;
 } 
