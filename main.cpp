@@ -22,16 +22,16 @@ void Insert(NODE* &pRoot, int x)
 {
     if (pRoot == NULL) 
 	{
-        pRoot = creatNode(x);
-    } 
+        	pRoot = creatNode(x);
+    	} 
 	else if (x < pRoot->key) 
 	{
-        Insert(pRoot->left, x);
-    } 
+        	Insert(pRoot->left, x);
+    	} 
 	else 
 	{
-        Insert(pRoot->right, x);
-    }
+        	Insert(pRoot->right, x);
+    	}
 }
 
 //2 travel node left right
@@ -156,7 +156,7 @@ void Remove(NODE* &pRoot, int x)
 	{
 		Remove(pRoot->right,x);
 	}
-	else if(x<=pRoot->key)
+	else if(x<pRoot->key)
 	{
 		Remove(pRoot->left,x);
 	}
