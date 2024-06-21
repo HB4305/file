@@ -316,7 +316,7 @@ bool checkGreater(NODE*pRoot,int x)
 }
 bool isBST(NODE* pRoot)
 {
-	if(pRoot==NULL) return false;
+	if(pRoot==NULL) return true;
 	if(checkLess(pRoot->left,pRoot->key)&&checkGreater(pRoot->right,pRoot->key)&&isBST(pRoot->left)&&isBST(pRoot->right))
 	{
 		return true;
