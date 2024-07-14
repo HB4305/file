@@ -22,19 +22,19 @@ void Insert(NODE* &pRoot, int x)
 {
     if (pRoot == NULL) 
 	{
-        	pRoot = creatNode(x);
-    	} 
+        pRoot = creatNode(x);
+    } 
 	else if (x < pRoot->key) 
 	{
-        	Insert(pRoot->left, x);
-    	} 
+        Insert(pRoot->left, x);
+    } 
 	else 
 	{
-        	Insert(pRoot->right, x);
-    	}
+        Insert(pRoot->right, x);
+    }
 }
 
-//2 travel node left right
+//2 travel node left right  pre - order
 void NLR(NODE* pRoot) 
 {
     if (pRoot == NULL) return;
@@ -43,8 +43,8 @@ void NLR(NODE* pRoot)
     NLR(pRoot->right);
 }
 
-//3 travel left node right
-void LNR(NODE* pRoot) 
+//3 travel left node right in - order
+void LNR(NODE* pRoot)  
 {
     if (pRoot == NULL) return;
     LNR(pRoot->left);
@@ -52,7 +52,7 @@ void LNR(NODE* pRoot)
     LNR(pRoot->right);
 }
 
-//4 travel left right node
+//4 travel left right node post - order
 void LRN(NODE* pRoot) 
 {
     if (pRoot == NULL) return;
